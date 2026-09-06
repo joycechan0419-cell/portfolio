@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# 测试 / 工具目录
+.playwright-mcp/
+dist/
+figma-resume/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / 构建产物
+node_modules/
+*.log
+
+# 临时
+*.tmp
+*.bak
