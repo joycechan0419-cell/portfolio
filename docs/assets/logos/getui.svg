@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 每日互动（个推）官方品牌色 #FF6E00（橙色）+ "个推" 中文 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" role="img" aria-label="每日互动 个推">
+  <rect x="2" y="6" width="48" height="48" rx="8" fill="#ff6e00"/>
+  <text x="26" y="40"
+        font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
+        font-weight="800"
+        font-size="26"
+        fill="#ffffff"
+        text-anchor="middle">个推</text>
+  <text x="60" y="38"
+        font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
+        font-weight="700"
+        font-size="24"
+        fill="#1a1a1a">每日互动</text>
+</svg>

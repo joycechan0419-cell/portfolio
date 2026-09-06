@@ -806,6 +806,27 @@
       border-color: var(--accent);
       transform: translateY(-2px);
     }
+    /* 公司 logo 容器 — 每段工作经历的视觉锚点 */
+    .ev-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .ev-logo img {
+      max-height: 28px;
+      max-width: 140px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .ev-logo-text {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink-mute);
+    }
     .ev-year {
       font-size: 11px;
       letter-spacing: 0.16em;
@@ -996,6 +1017,7 @@
     body .self-eval strong { color: var(--ink); }
     body .ev-row { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
     body .ev-row:hover { border-color: var(--accent); }
+    body .ev-logo-text { color: var(--ink-mute); }
     body .ev-year { color: var(--accent); }
     body .ev-text { color: var(--ink); }
     body .dim-num { color: var(--accent); }
@@ -2581,10 +2603,18 @@
           <p class="dim-desc" data-i18n="dim1.desc">把模糊的产品愿景转成可上线的第一版——从 C 端品牌 App 到 B 端数字化系统，主导多类 0→1 项目从 kickoff 到上线。</p>
           <div class="dim-evidence">
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/bajian.jpg" alt="安徽八建" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim1.e1y">2023 — 2026</div>
               <div class="ev-text" data-i18n="dim1.e1t">安徽八建 · 统筹集团品牌 VI + B 端数字化系统（管理后台 / 年度产值数据驾驶舱），获 2024–25 年度优秀员工</div>
             </div>
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/getui.svg" alt="每日互动" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim1.e2y">2016 — 2017</div>
               <div class="ev-text" data-i18n="dim1.e2t">每日互动（个推）· 参与一知 App 0→1 设计 + 个推品牌视觉延展 + 吉祥物表情包与线下展览</div>
             </div>
@@ -2600,10 +2630,18 @@
           <p class="dim-desc" data-i18n="dim2.desc">设计系统的胜利不在组件本身有多完整，而在被业务线主动复用——主导两个跨边界项目，把「复用率」做成可规模化的交付能力。</p>
           <div class="dim-evidence">
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/xingang.png" alt="芯港信息" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim2.e1y">2022 — 2023</div>
               <div class="ev-text" data-i18n="dim2.e1t">芯港信息 · 服务中国中车 / 冀东水泥 / 南玻 / 帝晶光电 / 美克美家等 10 行业客户，沉淀 B 端项目型设计 SOP，支撑规模化交付</div>
             </div>
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/iqiyi.svg" alt="爱奇艺" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim2.e2y">2017 — 2020</div>
               <div class="ev-text" data-i18n="dim2.e2t">爱奇艺 · 主导游戏中心 / 游戏直播 / 活动 3 大产品线，完成游戏垂类设计体系 0→1（千万级 DAU）；奇玩后台 1.0→2.0 大版本迭代</div>
             </div>
@@ -2619,14 +2657,26 @@
           <p class="dim-desc" data-i18n="dim3.desc">用流水 / 转化 / 效率这类可量化指标验证设计价值——主导 C 端增长与 B 端业务流程的体验设计。</p>
           <div class="dim-evidence">
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/iqiyi.svg" alt="爱奇艺" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim3.e1y">2017 — 2020</div>
               <div class="ev-text" data-i18n="dim3.e1t">爱奇艺 · 主导营销活动设计："军团争霸赛"上线三周日均流水 44W（涨幅 70%）；"狂欢派对"二期迭代日均流水 1W → 7W（涨幅 600%）</div>
             </div>
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/yijia.svg" alt="颐家科技" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim3.e2y">2020 — 2021</div>
               <div class="ev-text" data-i18n="dim3.e2t">颐家科技 · 主导核心增长模块（大众转 / 全员转等裂变产品），围绕"老带新"链路优化关键节点转化，支撑周期性拉新目标达成</div>
             </div>
             <div class="ev-row">
+    <div class="ev-logo">
+      <img src="assets/logos/derun.jpg" alt="德润环保" loading="lazy" decoding="async" />
+    </div>
+
               <div class="ev-year" data-i18n="dim3.e3y">2021 — 2022</div>
               <div class="ev-text" data-i18n="dim3.e3t">德润环保 · 主导工业物联网体验设计（自助过磅 / 交易数据中心 / 物流监控平台），打通现场移动端 + 管理端数据可视化</div>
             </div>
