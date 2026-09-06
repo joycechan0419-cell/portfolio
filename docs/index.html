@@ -24,6 +24,8 @@
   <link rel="preload" as="image" href="assets/avatar.jpg" imagesrcset="assets/avatar.jpg 1x, assets/avatar@2x.jpg 2x" fetchpriority="high" />
   <!-- 微信二维码预加载（联系关键路径，避免懒加载延迟） -->
   <link rel="preload" as="image" href="assets/wechat-qr.png" fetchpriority="high" />
+  <!-- 简历 PDF 预加载（用户点下载按钮时零延迟） -->
+  <link rel="preload" as="fetch" href="assets/Resume.pdf" crossorigin />
   <style>
     /* ========= 基础重置 ========= */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -3858,8 +3860,8 @@
   }
 
   // ============ 下载简历按钮 ============
-  // 路径指向用户桌面上的 Resume.pdf; 提供三种兜底: <a download> / window.open / 提示
-  const RESUME_PATH = 'file:///Users/chenyue/Desktop/Resume.pdf';
+  // 路径指向 docs/assets/Resume.pdf (A4 打印清晰 + 修过 ToUnicode CMap，AI/ATS 可正确识别)
+  const RESUME_PATH = 'assets/Resume.pdf';
   const RESUME_FILENAME = '陈悦-简历.pdf';
 
   const dlBtn = document.getElementById('dlResume');
