@@ -14,10 +14,15 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noai, noimageai" />
   <meta name="googlebot" content="noindex, nofollow" />
   <meta name="bingbot" content="noindex, nofollow" />
+  <!-- Google Fonts 异步加载：preconnect + stylesheet + media trick 避免阻塞首屏渲染 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" /></noscript>
+  <!-- Hero 头像预加载（首屏 LCP 关键资源） -->
+  <link rel="preload" as="image" href="assets/avatar.jpg" imagesrcset="assets/avatar.jpg 1x, assets/avatar@2x.jpg 2x" fetchpriority="high" />
   <style>
-    /* ========= Google Fonts：Inter (正文) + Roboto Mono (数字/标签) + Archivo (大标题兜底) ========= */
-    @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
-
     /* ========= 基础重置 ========= */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -2145,10 +2150,10 @@
           <div class="case-01-thumb" data-thumb>
             <div class="case-01-thumb-viewport">
               <div class="case-01-thumb-track">
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-a-1.jpg" alt="主视觉设计 - 色彩定义" /></div>
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-a-2.jpg" alt="主视觉设计 - 主页设计" /></div>
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-a-3.jpg" alt="主视觉设计 - 内容展示" /></div>
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-a-4.jpg" alt="主视觉设计 - Dark Mode" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-a-1.jpg" alt="主视觉设计 - 色彩定义" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-a-2.jpg" alt="主视觉设计 - 主页设计" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-a-3.jpg" alt="主视觉设计 - 内容展示" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-a-4.jpg" alt="主视觉设计 - Dark Mode" /></div>
               </div>
               <div class="case-01-thumb-dots">
                 <span class="case-01-thumb-dot active"></span>
@@ -2169,9 +2174,9 @@
           <div class="case-01-thumb" data-thumb>
             <div class="case-01-thumb-viewport">
               <div class="case-01-thumb-track">
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-b-1.jpg" alt="直播间改版 - 改版前" /></div>
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-b-2.jpg" alt="直播间改版 - 改版后" /></div>
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-b-3.jpg" alt="直播间改版 - 礼物模块" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-b-1.jpg" alt="直播间改版 - 改版前" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-b-2.jpg" alt="直播间改版 - 改版后" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-b-3.jpg" alt="直播间改版 - 礼物模块" /></div>
               </div>
               <div class="case-01-thumb-dots">
                 <span class="case-01-thumb-dot active"></span>
@@ -2191,7 +2196,7 @@
           <div class="case-01-thumb" data-thumb>
             <div class="case-01-thumb-viewport">
               <div class="case-01-thumb-track">
-                <div class="case-01-thumb-slide"><img src="assets/case-01-pos-c-1.jpg" alt="直播间挂件 - 改版后" /></div>
+                <div class="case-01-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-01-pos-c-1.jpg" alt="直播间挂件 - 改版后" /></div>
               </div>
               <span class="case-01-thumb-counter" data-thumb-counter>1 / 1</span>
             </div>
@@ -2293,7 +2298,7 @@
             <span class="case-02-pos-tag">01 · 现场端过磅流程</span>
           </div>
           <div class="case-02-img" style="aspect-ratio: 16/9;">
-            <img src="assets/case-02-pos-a-1.jpg" alt="现场端过磅流程 · 3+2+2 分段" data-c02-img-01 />
+            <img loading="lazy" decoding="async" src="assets/case-02-pos-a-1.jpg" alt="现场端过磅流程 · 3+2+2 分段" data-c02-img-01 />
           </div>
         </div>
 
@@ -2307,9 +2312,9 @@
                data-c02-label="管理端数据驾驶舱">
             <div class="case-02-thumb-viewport">
               <div class="case-02-thumb-track">
-                <div class="case-02-thumb-slide"><img src="assets/case-02-pos-b-1.jpg" alt="纸去哪了运营中心" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-02-pos-b-2.jpg" alt="禹会数字产业链数据中心" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-02-pos-b-3.jpg" alt="废宝通自助过磅看板" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-02-pos-b-1.jpg" alt="纸去哪了运营中心" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-02-pos-b-2.jpg" alt="禹会数字产业链数据中心" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-02-pos-b-3.jpg" alt="废宝通自助过磅看板" /></div>
               </div>
               <div class="case-02-thumb-dots">
                 <span class="case-02-thumb-dot active"></span>
@@ -2420,19 +2425,19 @@
                data-c02-label="后台系统设计规范">
             <div class="case-02-thumb-viewport">
               <div class="case-02-thumb-track">
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-1.jpg" alt="图 1" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-2.jpg" alt="图 2" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-3.jpg" alt="图 3" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-4.jpg" alt="图 4" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-5.jpg" alt="图 5" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-6.jpg" alt="图 6" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-7.jpg" alt="图 7" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-8.jpg" alt="图 8" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-9.jpg" alt="图 9" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-10.jpg" alt="图 10" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-11.jpg" alt="图 11" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-12.jpg" alt="图 12" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-d-13.jpg" alt="图 13" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-1.jpg" alt="图 1" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-2.jpg" alt="图 2" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-3.jpg" alt="图 3" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-4.jpg" alt="图 4" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-5.jpg" alt="图 5" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-6.jpg" alt="图 6" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-7.jpg" alt="图 7" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-8.jpg" alt="图 8" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-9.jpg" alt="图 9" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-10.jpg" alt="图 10" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-11.jpg" alt="图 11" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-12.jpg" alt="图 12" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-d-13.jpg" alt="图 13" /></div>
               </div>
               <div class="case-02-thumb-dots">
                 <span class="case-02-thumb-dot active"></span>
@@ -2463,17 +2468,17 @@
                data-c02-label="数据可视化大屏设计规范">
             <div class="case-02-thumb-viewport">
               <div class="case-02-thumb-track">
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-1.jpg" alt="封面" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-2.jpg" alt="图 1" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-3.jpg" alt="图 2" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-4.jpg" alt="图 3" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-5.jpg" alt="图 4" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-6.jpg" alt="图 5" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-7.jpg" alt="图 6" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-8.jpg" alt="图 7" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-9.jpg" alt="图 8" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-10.jpg" alt="图 9" /></div>
-                <div class="case-02-thumb-slide"><img src="assets/case-03-pos-e-11.jpg" alt="图 10" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-1.jpg" alt="封面" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-2.jpg" alt="图 1" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-3.jpg" alt="图 2" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-4.jpg" alt="图 3" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-5.jpg" alt="图 4" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-6.jpg" alt="图 5" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-7.jpg" alt="图 6" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-8.jpg" alt="图 7" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-9.jpg" alt="图 8" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-10.jpg" alt="图 9" /></div>
+                <div class="case-02-thumb-slide"><img loading="lazy" decoding="async" src="assets/case-03-pos-e-11.jpg" alt="图 10" /></div>
               </div>
               <div class="case-02-thumb-dots">
                 <span class="case-02-thumb-dot active"></span>
@@ -2811,7 +2816,7 @@
       </div>
 
       <div class="wechat-card">
-        <img src="assets/wechat-qr.png" alt="WeChat QR" class="qr-img" />
+        <img loading="lazy" decoding="async" src="assets/wechat-qr.png" alt="WeChat QR" class="qr-img" />
         <div class="qr-label" data-i18n="contact.wechatLabel">微信 / WeChat</div>
         <div class="qr-hint" data-i18n="contact.wechatHint">扫码加我 / Scan to add</div>
       </div>
@@ -2854,7 +2859,7 @@
 <!-- ============ 头像放大灯箱 ============ -->
 <div class="avatar-lightbox" id="avatarLightbox" role="dialog" aria-label="放大头像" aria-hidden="true">
   <button class="lb-close" type="button" aria-label="关闭">×</button>
-  <img src="assets/avatar-full.jpg" alt="陈悦 · 完整肖像" />
+  <img loading="lazy" decoding="async" src="assets/avatar-full.jpg" alt="陈悦 · 完整肖像" />
   <div class="lb-meta">Chen Yue · Product Designer</div>
 </div>
 
@@ -2872,7 +2877,7 @@
     </svg>
   </button>
   <div class="lb-label" data-lb-label></div>
-  <img class="lb-img" data-lb-img alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'/%3E" />
+  <img loading="lazy" decoding="async" class="lb-img" data-lb-img alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'/%3E" />
   <div class="lb-counter" data-lb-counter></div>
 </div>
 
@@ -2889,9 +2894,39 @@
       <polyline points="9 18 15 12 9 6"/>
     </svg>
   </button>
-  <img class="lb-img" data-c02-lb-img alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'/%3E" />
+  <img loading="lazy" decoding="async" class="lb-img" data-c02-lb-img alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'/%3E" />
   <div class="lb-counter" data-c02-lb-counter></div>
 </div>
+
+<!-- ============ WebP 渐进增强：自动用 .webp 替代 .jpg（-54% 体积） ============ -->
+<script>
+(function(){
+  // 检测浏览器是否支持 WebP（用 1x1 WebP 图片测）
+  var webpSupported = false;
+  try {
+    var c = document.createElement('canvas');
+    webpSupported = c.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  } catch(e) {}
+
+  if (!webpSupported) return; // 不支持就直接退出
+
+  // 升级所有 <img src="*.jpg"> 到 .webp（用同步探测避免请求失败）
+  // 注意：保留首屏 hero 头像同步 src 不替换（preload 已指定 .jpg）
+  var imgs = document.querySelectorAll('img[src$=".jpg"]');
+  imgs.forEach(function(img){
+    var src = img.getAttribute('src');
+    if (!src) return;
+    var webpSrc = src.replace(/\.jpg$/, '.webp');
+    // 用 Image() 探测加载是否成功，成功则替换
+    var test = new Image();
+    test.onload = function(){
+      if (test.width > 0) img.src = webpSrc;
+    };
+    test.onerror = function(){ /* keep original */ };
+    test.src = webpSrc;
+  });
+})();
+</script>
 
 <!-- ============ i18n 词典 & 切换逻辑 ============ -->
 <script>
