@@ -1861,7 +1861,10 @@
       :root { --pad-x: 28px; }
       .hero-name { font-size: 72px; }
       .hero-grid { grid-template-columns: 1fr; }
-      .avatar { width: 120px; height: 120px; font-size: 48px; }
+      /* 移动端：让头像容器（grid 第二列）水平居中 + 头像本身大一点 */
+      .hero-grid > div:nth-child(2) { justify-self: center; text-align: center; }
+      .avatar { width: 168px; height: 168px; }
+      .avatar-meta, .avatar-hint { text-align: center; }
       h2 { font-size: 30px; }
       .works-grid { grid-template-columns: 1fr; }
       .case-head { grid-template-columns: 1fr; gap: 12px; }
@@ -1874,6 +1877,21 @@
       .tl-role { text-align: left; }
       .hero-meta { grid-template-columns: 1fr 1fr; gap: 20px; }
       .about-grid { grid-template-columns: 1fr; }
+      /* Case 01 移动端：横向容器改成垂直堆叠，每张图占满屏宽（与 Case 02/03 一致） */
+      .case-01-row {
+        flex-direction: column;
+        overflow-x: visible;
+        mask-image: none;
+        -webkit-mask-image: none;
+        scroll-snap-type: none;
+        gap: 28px;
+        padding: 4px 0 16px;
+      }
+      .case-01-pos {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+      }
       nav ul { display: none; }
     }
     @media (max-width: 560px) {
