@@ -806,20 +806,26 @@
       border-color: var(--accent);
       transform: translateY(-2px);
     }
-    /* 公司 logo 容器 — 每段工作经历的视觉锚点 */
+    /* 公司 logo 容器 — 每段工作经历的视觉锚点
+   策略：所有 logo 固定显示在 180×36 容器内，object-fit: contain 让 logo 居中
+   这样不同宽高比的 logo 在视觉上"占用区域"对齐，看起来大小一致 */
     .ev-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+      height: 36px;
+      width: 180px; /* 固定宽度，与 ev-row 缩略图右对齐时也整齐 */
     }
     .ev-logo img {
-      max-height: 28px;
-      max-width: 140px;
+      max-width: 100%;
+      max-height: 100%;
       width: auto;
+      height: auto;
       object-fit: contain;
+      object-position: left center;
       display: block;
       image-rendering: -webkit-optimize-contrast;
+      filter: brightness(1.08); /* 微调亮度，避免反白后太刺眼 */
     }
     .ev-logo-text {
       font-size: 11px;
@@ -2604,7 +2610,7 @@
           <div class="dim-evidence">
             <div class="ev-row">
     <div class="ev-logo">
-      <img src="assets/logos/bajian.jpg" alt="安徽八建" loading="lazy" decoding="async" />
+      <img src="assets/logos/bajian.png" alt="安徽八建" loading="lazy" decoding="async" />
     </div>
 
               <div class="ev-year" data-i18n="dim1.e1y">2023 — 2026</div>
@@ -2612,7 +2618,7 @@
             </div>
             <div class="ev-row">
     <div class="ev-logo">
-      <img src="assets/logos/getui.svg" alt="每日互动" loading="lazy" decoding="async" />
+      <img src="assets/logos/getui.png" alt="每日互动" loading="lazy" decoding="async" />
     </div>
 
               <div class="ev-year" data-i18n="dim1.e2y">2016 — 2017</div>
@@ -2639,7 +2645,7 @@
             </div>
             <div class="ev-row">
     <div class="ev-logo">
-      <img src="assets/logos/iqiyi.svg" alt="爱奇艺" loading="lazy" decoding="async" />
+      <img src="assets/logos/iqiyi.png" alt="爱奇艺" loading="lazy" decoding="async" />
     </div>
 
               <div class="ev-year" data-i18n="dim2.e2y">2017 — 2020</div>
@@ -2658,7 +2664,7 @@
           <div class="dim-evidence">
             <div class="ev-row">
     <div class="ev-logo">
-      <img src="assets/logos/iqiyi.svg" alt="爱奇艺" loading="lazy" decoding="async" />
+      <img src="assets/logos/iqiyi.png" alt="爱奇艺" loading="lazy" decoding="async" />
     </div>
 
               <div class="ev-year" data-i18n="dim3.e1y">2017 — 2020</div>
@@ -2666,7 +2672,7 @@
             </div>
             <div class="ev-row">
     <div class="ev-logo">
-      <img src="assets/logos/yijia.svg" alt="颐家科技" loading="lazy" decoding="async" />
+      <img src="assets/logos/yijia.png" alt="颐家科技" loading="lazy" decoding="async" />
     </div>
 
               <div class="ev-year" data-i18n="dim3.e2y">2020 — 2021</div>
@@ -2674,7 +2680,7 @@
             </div>
             <div class="ev-row">
     <div class="ev-logo">
-      <img src="assets/logos/derun.jpg" alt="德润环保" loading="lazy" decoding="async" />
+      <img src="assets/logos/derun.png" alt="德润环保" loading="lazy" decoding="async" />
     </div>
 
               <div class="ev-year" data-i18n="dim3.e3y">2021 — 2022</div>
