@@ -807,14 +807,17 @@
       transform: translateY(-2px);
     }
     /* 公司 logo 容器 — 每段工作经历的视觉锚点
-   策略：所有 logo 固定显示在 180×36 容器内，object-fit: contain 让 logo 居中
-   这样不同宽高比的 logo 在视觉上"占用区域"对齐，看起来大小一致 */
+   策略：所有 logo 固定显示在 220×64 容器内，object-fit: contain 居中
+   - 不同 logo（图标型 vs 文字型）在容器内缩放，'占用同一区域'
+   - 视觉上'看起来大小一致'（容器大小 = 视觉大小）
+   - 图标型 logo 居左，文字型 logo 也居左，对齐左边缘 */
     .ev-logo {
       display: flex;
       align-items: center;
-      margin-bottom: 8px;
-      height: 36px;
-      width: 180px; /* 固定宽度，与 ev-row 缩略图右对齐时也整齐 */
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      height: 64px;
+      width: 220px;
     }
     .ev-logo img {
       max-width: 100%;
@@ -825,7 +828,7 @@
       object-position: left center;
       display: block;
       image-rendering: -webkit-optimize-contrast;
-      filter: brightness(1.08); /* 微调亮度，避免反白后太刺眼 */
+      filter: brightness(1.08);
     }
     .ev-logo-text {
       font-size: 11px;
