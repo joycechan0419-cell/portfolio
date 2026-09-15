@@ -1000,7 +1000,7 @@
     body footer { border-top-color: var(--line); }
     body .education-card { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
     body .education-card:hover { border-color: var(--accent); }
-    body .edu-logo { background: linear-gradient(135deg, var(--accent), #9070ff); }
+    body .edu-logo { background: #fff; }
     body .lang-toggle { background: rgba(255,255,255,0.04); border-color: var(--line); }
     body .lang-toggle button { color: var(--ink-mute); }
     body .lang-toggle button.active { background: var(--ink); color: #0a0a12; }
@@ -1136,14 +1136,20 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     }
     .edu-logo {
-      width: 60px; height: 60px;
+      width: 64px; height: 64px;
       border-radius: 0;
-      background: linear-gradient(135deg, var(--accent) 0%, #4070F0 100%);
-      color: #fff;
+      background: #fff;
+      padding: 6px;
       display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 18px;
-      letter-spacing: -0.02em;
       flex-shrink: 0;
+    }
+    .edu-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
     .edu-body { min-width: 0; }
     .edu-body .edu-title {
@@ -2837,7 +2843,7 @@
 
     <!-- 顶部 · 教育（卡片全宽） -->
     <div class="education-card">
-      <div class="edu-logo">CAFA</div>
+      <div class="edu-logo"><img src="assets/cafa-logo.png" alt="中国美术学院" loading="lazy" decoding="async" /></div>
       <div class="edu-body">
         <div class="edu-title" data-i18n="more.eduName">中国美术学院</div>
         <div class="edu-sub" data-i18n="more.eduDept">工业设计系 · 产品与交互方向</div>
